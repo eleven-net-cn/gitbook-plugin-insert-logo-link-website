@@ -1,19 +1,16 @@
 {
   "description": "GitBook Plugin to insert (url or file or base64) into the navigation above search input.",
-  "name": "gitbook-plugin-insert-logo",
-  "version": "0.1.5",
+  "name": "gitbook-plugin-insert-logo-link",
+  "version": "1.0.0",
   "keywords": [
     "gitbook",
     "plugin",
     "insert-logo",
     "logo",
-    "github"
+    "link"
   ],
   "main": "index.js",
-  "author": {
-    "name": "matusnovak",
-    "email": "matusnov@gmail.com"
-  },
+  "author": "matusnovak,Eleven",
   "readme": "GitBook Plugin to insert logo (url or file or base64) into the navigation above search input.",
   "engines": {
     "gitbook": ">1.x.x"
@@ -25,6 +22,11 @@
         "default": "http://www.example.com/my-logo.png",
         "title": "Logo URL"
       },
+      "link": {
+        "type": "string",
+        "default": "javascript:;",
+        "title": "websit link"
+      },
       "style": {
         "type": "string",
         "default": "background: none;",
@@ -34,6 +36,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/matusnovak/gitbook-plugin-insert-logo.git"
+    "url": "git@github.com:Eleven90/gitbook-plugin-insert-logo.git"
   }
 }
