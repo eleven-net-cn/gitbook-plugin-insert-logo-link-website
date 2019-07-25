@@ -25,11 +25,20 @@ yarn add gitbook-plugin-insert-logo-link-website
   "plugins": ["insert-logo-link-website"],
   "pluginsConfig": {
     "insert-logo-link-website": {
-      "url": "http://www.example.com/my-logo.png", // logo 地址（相对地址、绝对地址、base64）
-      "link": "https://www.google.com", // 跳转站点位置
-      "target": "_blank", // 跳转站点的打开方式，同 a 标签 target
-      "style": "height: 30px" // logo 样式
+      "url": "http://www.example.com/my-logo.png",
+      "link": "https://www.google.com",
+      "target": "_blank",
+      "style": "height: 30px"
     }
   }
 }
 ```
+
+## Constants
+
+| 参数名 | 类型   | 必填 | 默认值                             | 说明                                                                         |
+| ------ | ------ | ---- | ---------------------------------- | ---------------------------------------------------------------------------- |
+| url    | String | 是   | http://www.example.com/my-logo.png | logo 的路径（绝对路径、相对路径、base64）                                    |
+| link   | String | 否   | javascript:;                                 | logo 点击的跳转地址                                                          |
+| target | String | 否   | \_blank                            | 跳转站点的打开方式，同 a 标签的 target（\_bank、\_self、\_top、\_parent 等） |
+| style  | String | 否   | --                                 | logo 的样式，会作用于 logo 本身的 img 标签上                                 |
