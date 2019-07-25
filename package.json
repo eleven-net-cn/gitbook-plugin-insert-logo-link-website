@@ -1,6 +1,6 @@
 {
   "name": "gitbook-plugin-insert-logo-link-website",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "GitBook Plugin to insert (url or file or base64) into the navigation above search input.",
   "keywords": [
     "gitbook",
