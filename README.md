@@ -6,6 +6,7 @@
 
 > 直接 install 安装，或者，在 book.json 写入到 plugin 配置后，再运行 `gitbook install` 命令安装。
 
+
 NPM
 
 ```sh
