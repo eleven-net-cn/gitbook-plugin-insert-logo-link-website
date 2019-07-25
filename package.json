@@ -1,7 +1,7 @@
 {
-  "description": "GitBook Plugin to insert (url or file or base64) into the navigation above search input.",
-  "name": "gitbook-plugin-insert-logo-link",
+  "name": "gitbook-plugin-insert-logo-link-website",
   "version": "1.0.0",
+  "description": "GitBook Plugin to insert (url or file or base64) into the navigation above search input.",
   "keywords": [
     "gitbook",
     "plugin",
@@ -27,6 +27,11 @@
         "default": "javascript:;",
         "title": "websit link"
       },
+      "target": {
+        "type": "string",
+        "default": "_blank",
+        "title": "link mode"
+      },
       "style": {
         "type": "string",
         "default": "background: none;",
@@ -36,6 +41,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:Eleven90/gitbook-plugin-insert-logo.git"
+    "url": "git@github.com:Eleven90/gitbook-plugin-insert-logo-link-website.git"
   }
 }
