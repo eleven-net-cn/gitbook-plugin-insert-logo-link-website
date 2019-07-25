@@ -1,45 +1,35 @@
-GitBook plugin: Insert logo
-===========================
+# [gitbook-plugin-insert-logo-link-website](https://www.npmjs.com/package/gitbook-plugin-insert-logo-link-website)
 
-NPM package [here](https://www.npmjs.com/package/gitbook-plugin-insert-logo)
+> 在左侧菜单栏顶部添加 logo，并提供链接跳转至站点。fork 自 https://github.com/matusnovak/gitbook-plugin-insert-logo ，原版没有提供跳转站点功能，扩展开发了一版。
 
+## Installation
+
+> 直接 install 安装，或者，在 book.json 写入到 plugin 配置后，再运行 `gitbook install` 命令安装。
+
+NPM
+
+```sh
+npm i gitbook-plugin-insert-logo-link-website
 ```
-npm i gitbook-plugin-insert-logo
+
+Yarn
+
+```sh
+yarn add gitbook-plugin-insert-logo-link-website
 ```
 
-The following plugin inserts a logo into the navigation bar (above the summary and above the search input). Simply, drop a `logo.png` file into the root folder of your GitBook and add this plugin into your `book.json`:
+在 book.json 文件增加 plugin、pluginsConfig 配置：
 
 ```json
 {
-    "plugins": ["insert-logo", "another plugin 1", "another plugin 2"]
-}
-```
-
-You will also need to provide url for the logo. The url can be local file, a remote URL, or base64 hash. Add the url into the plugin configuration in your `book.json`:
-
-```json
-{
-    "plugins": ["insert-logo", "another plugin 1", "another plugin 2"],
-    "pluginsConfig": {
-        "insert-logo": {
-            "url": "http://www.example.com/my-logo.png",
-            "style": "background: none;"
-        }
+  "plugins": ["insert-logo-link-website"],
+  "pluginsConfig": {
+    "insert-logo-link-website": {
+      "url": "http://www.example.com/my-logo.png", // logo 地址（相对地址、绝对地址、base64）
+      "link": "https://www.google.com", // 跳转站点位置
+      "target": "_blank", // 跳转站点的打开方式，同 a 标签 target
+      "style": "height: 30px" // logo 样式
     }
-}
-```
-
-## Logo is disappearing?
-
-You are most likely using relative paths for your logo in the config. The path is relative to the current page. This can also happen with nested TOC. Consider using absolute path (the url to the file starts as: `/logo.png` instead of `logo.png`), or use base64 (see example below).
-
-## Use base64 for logo instead of URL
-_(The example gif encoded as base64 is taken from example here: https://css-tricks.com/data-uris/)_
-
-```
-"pluginsConfig": {
-    "insert-logo": {
-        "url": "data:image/gif;base64,R0lGODlhEAAQAMQAAORHHOVSKudfOulrSOp3WOyDZu6QdvCchPGolfO0o/XBs/fNwfjZ0frl3/zy7////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAkAABAALAAAAAAQABAAAAVVICSOZGlCQAosJ6mu7fiyZeKqNKToQGDsM8hBADgUXoGAiqhSvp5QAnQKGIgUhwFUYLCVDFCrKUE1lBavAViFIDlTImbKC5Gm2hB0SlBCBMQiB0UjIQA7"
-    }
+  }
 }
 ```
