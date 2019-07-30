@@ -1,10 +1,10 @@
 # [gitbook-plugin-insert-logo-link-website](https://www.npmjs.com/package/gitbook-plugin-insert-logo-link-website)
 
-> 在左侧菜单栏顶部添加 logo，并提供链接跳转至站点。fork 自 https://github.com/matusnovak/gitbook-plugin-insert-logo ，原版没有提供跳转站点功能，扩展开发了一版。
+在左侧菜单栏顶部添加 logo，并提供链接跳转至站点。fork 自 https://github.com/matusnovak/gitbook-plugin-insert-logo ，原版没有提供跳转站点功能，扩展开发了一版。
 
 ## Installation
 
-> 直接 install 安装，或者，在 book.json 写入到 plugin 配置后，再运行 `gitbook install` 命令安装。
+直接 install 安装，或者，在 book.json 写入到 plugin 配置后，再运行 `gitbook install` 命令安装。
 
 
 NPM
